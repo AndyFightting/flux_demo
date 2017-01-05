@@ -3,7 +3,7 @@ import View from './View'
 import ViewModal from './ViewModal'
 import ViewAction from './ViewAction'
 
-export default class App extends Component {
+export default class ViewController extends Component {
 
       constructor(props) {
         super(props);
