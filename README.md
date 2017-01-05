@@ -10,10 +10,23 @@ ViewController 里添加Modal的回调监听，放置具体的View,View里的控
 在这方法里调用Action来给Dispatcher发消息，Dispatcher收到消息后处理Modal,Modal处理完后触发之前在ViewController
 里设置的回调监听，然后在监听方法里刷新数据，更新组件。
 ```
-额...好像说得稀里糊涂的，看完具体demo,把一个流程看下来就知道这套路是怎么回事了。
+
+### Reflux 是什么？
+Relfux 是对flux流程的一种封装。省去了Dispatcher,只有Action，Modal,View。View要修改数据的话是通过调用Action来进行对Modal的修改，然后View监听Modal的变化刷新组件。
+
+flux,Reflux 解决的是数据流程问题。如果像下面嵌套了很多层的话，中间会有很多prop仅仅只是为了传递数据，所以把 `操作`和`数据`部分给抽了出来。
+
+<img src="https://github.com/AndyFightting/flux_demo/blob/master/image0.png" width="50%" height="50%" />
+
+<img src="https://github.com/AndyFightting/flux_demo/blob/master/image1.png" width="50%" height="50%" />
+
+这样要修改View的话只需要调用Action就可以了。
+
 
 ###运行Demo
 
 1.下载下来后  cd 进入项目文件夹 flux_demo, 然后执行命令 `yarn install` ([yarn](https://yarnpkg.com/en/docs/install#mac)和npm一样是个包管理工具)
 
 2.再执行命令`yarn start`就可以在浏览器看到Demo了
+
+3.在index.js 里切换组件看不同的demo
