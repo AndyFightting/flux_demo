@@ -1,5 +1,5 @@
 ### Flux 是什么？
-Flux是一种数据处理流程规范，一种结构，一种套路。它不是非得与React绑定使用的，React只是负责组件如何组织，用原生方式组织控件也是可以的。
+[Flux](http://blog.andrewray.me/flux-for-stupid-people/)是一种数据处理流程规范，一种结构，一种套路。它不是非得与React绑定使用的，React只是负责组件如何组织，用原生方式组织控件也是可以的。
 
 ![](https://github.com/AndyFightting/flux_demo/blob/master/sample.gif)
 
